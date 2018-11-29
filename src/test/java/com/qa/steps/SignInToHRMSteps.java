@@ -12,6 +12,7 @@ import cucumber.api.java.en.When;
 public class SignInToHRMSteps {
 
 	Logger logger = Logger.getLogger(HooksSteps.class);
+	
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 

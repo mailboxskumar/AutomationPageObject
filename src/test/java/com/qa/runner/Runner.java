@@ -12,7 +12,8 @@ import cucumber.api.junit.Cucumber;
 	monochrome = true,
 	strict = false,
 	dryRun = false,
-	tags = "@HRM")
+	tags = "@HRM-Login")
+
 
 public class Runner {
 	

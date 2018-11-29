@@ -1,18 +1,5 @@
 package com.qa.steps;
 
-import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-
-import com.qa.driver.DriverManager;
-import com.qa.pages.LoginPage;
-
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-
 public class HooksSteps {
 
 	/*WebDriver driver = DriverManager.driver;
