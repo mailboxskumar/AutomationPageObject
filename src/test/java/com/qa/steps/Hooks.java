@@ -2,6 +2,7 @@ package com.qa.steps;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
@@ -19,6 +20,7 @@ public class Hooks {
 	@Before()
 	public void setUpDriver() {
 		logger.info(">>> @Before Hook Step Starts");
+		BasicConfigurator.configure();
 		driver = initializeDriver();
 		driver.get(appURL);
 		driver.manage().window().maximize();
