@@ -2,8 +2,13 @@ package com.qa.steps;
 
 import org.apache.log4j.Logger;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.qa.pages.HomePage;
 import com.qa.pages.LoginPage;
+import com.qa.utility.ReportUtility;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -12,17 +17,22 @@ import cucumber.api.java.en.When;
 public class SignInToHRMSteps {
 
 	Logger logger = Logger.getLogger(HooksSteps.class);
-	
+
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 
+	ExtentReports report = ReportUtility.setupReport();
+	ExtentTest test = ReportUtility.createTest(report, "HRM Login");
+	
 	@Given("^I am in HRM portal login Page$")
 	public void i_am_in_HRM_portal_login_Page() {
-
+		
 		if (loginPage.isUserNameTextBoxDisplayed()) {
 			logger.info(">>> Orange HRM login page is displayed");
+			ReportUtility.setLogStatus(test, "Pass", "Orange HRM login page is displayed");
 		} else {
 			logger.info(">>> Orange HRM login page is not displayed");
+			ReportUtility.setLogStatus(test, "Fail", "Orange HRM login page is not displayed");
 		}
 	}
 
@@ -42,6 +52,8 @@ public class SignInToHRMSteps {
 			logger.info(">>> User successfuly logged into Orange HRM application");
 		else
 			logger.info(">>> User unable logged into Orange HRM application");
+	
+		ReportUtility.flushReport(report);
 	}
 
 }
