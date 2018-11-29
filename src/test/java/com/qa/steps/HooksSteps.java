@@ -15,8 +15,7 @@ import cucumber.api.java.en.When;
 
 public class HooksSteps {
 
-	//WebDriver driver = CucumberHooks.driver;
-	WebDriver driver = DriverManager.driver;
+	/*WebDriver driver = DriverManager.driver;
 	
 	Logger logger = Logger.getLogger(HooksSteps.class);
 
@@ -42,5 +41,5 @@ public class HooksSteps {
 	public void i_validate_the_outcomes() {
 		driver.findElement(By.xpath(LoginPage.login_Xpath)).click();
 	}
-
+*/
 }

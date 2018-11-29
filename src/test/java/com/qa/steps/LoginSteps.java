@@ -16,7 +16,7 @@ import cucumber.api.java.en.When;
 
 public class LoginSteps {
 	
-	WebDriver driver = DriverManager.driver;
+	/*WebDriver driver = DriverManager.driver;
 
 	@Given("^I navigate to salesforce login page through chrome browser \"([^\"]*)\"$")
 	public void loginApplication(String appUrl) throws Throwable {
@@ -83,5 +83,5 @@ public class LoginSteps {
 		}
 
 	}
-
+*/
 }
