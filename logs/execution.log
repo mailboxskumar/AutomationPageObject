@@ -1,0 +1,17 @@
+
+2018-11-29 18:51:39 INFO com.qa.steps.Hooks INFO: >> Before Hook Step Starts 
+2018-11-29 18:52:12 INFO com.qa.steps.Hooks INFO: >> Before Hook Step ends 
+2018-11-29 18:52:16 INFO com.qa.steps.HooksSteps Given statement started 
+2018-11-29 18:52:21 INFO com.qa.steps.Hooks INFO: >> After Hook Step Starts 
+2018-11-29 18:52:22 INFO com.qa.steps.Hooks INFO: >> After Hook Step Starts 
+2018-11-29 18:57:41 INFO com.qa.steps.Hooks INFO: >> Before Hook Step Starts 
+2018-11-29 18:58:08 INFO com.qa.steps.Hooks INFO: >> Before Hook Step ends 
+2018-11-29 18:58:08 INFO com.qa.steps.HooksSteps Given statement started 
+2018-11-29 18:58:13 INFO com.qa.steps.Hooks INFO: >> After Hook Step Starts 
+2018-11-29 18:58:17 INFO com.qa.steps.Hooks INFO: >> After Hook Step Starts 
+2018-11-29 19:04:55 INFO com.qa.steps.Hooks >>> @Before Hook Step Starts 
+2018-11-29 19:05:00 INFO com.qa.driver.DriverManager >>> Chrome Driver initialized 
+2018-11-29 19:05:13 INFO com.qa.steps.Hooks >>> @Before Hook Step ends 
+2018-11-29 19:05:13 INFO com.qa.steps.HooksSteps Given statement started 
+2018-11-29 19:05:18 INFO com.qa.steps.Hooks >>> @After Hook Step Starts 
+2018-11-29 19:05:19 INFO com.qa.steps.Hooks >>> @After Hook Step Starts 
