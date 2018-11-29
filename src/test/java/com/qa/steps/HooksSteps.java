@@ -1,6 +1,7 @@
 package com.qa.steps;
 
 import java.util.concurrent.TimeUnit;
+import org.apache.log4j.Logger;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,10 +17,12 @@ public class HooksSteps {
 
 	//WebDriver driver = CucumberHooks.driver;
 	WebDriver driver = DriverManager.driver;
+	
+	Logger logger = Logger.getLogger(HooksSteps.class);
 
 	@Given("^I want to write a step with precondition$")
 	public void i_want_to_write_a_step_with_precondition() {
-		System.out.println("Test");
+		logger.info("Given statement started");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		if (driver.findElement(By.id(LoginPage.userName_ID)).isDisplayed()) {
 			System.out.println("I  am in salesforce login page");

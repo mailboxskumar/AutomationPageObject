@@ -2,6 +2,7 @@ package com.qa.steps;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
 import static com.qa.driver.DriverManager.*;
@@ -13,22 +14,23 @@ import cucumber.api.java.Before;
 public class Hooks {
 
 	public static WebDriver driver;
+	Logger logger = Logger.getLogger(Hooks.class);
 
 	@Before()
 	public void setUpDriver() {
-		System.out.println("start-Before cucumber hooks");
+		logger.info(">>> @Before Hook Step Starts");
 		driver = initializeDriver();
 		driver.get(appURL);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-		System.out.println("end-Before cucumber hooks");
+		logger.info(">>> @Before Hook Step ends");
 	}
 
 	@After()
 	public void closeDriver() {
-		System.out.println("start-After cucumber hooks");
+		logger.info(">>> @After Hook Step Starts");
 		driver.quit();
-		System.out.println("end-After cucumber hooks");
+		logger.info(">>> @After Hook Step ends");
 	}
 
 }
