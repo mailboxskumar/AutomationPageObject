@@ -15,7 +15,7 @@ public class Config {
 		Properties prop = new Properties();
 		FileInputStream file;
 		try {
-			file = new FileInputStream("./src/test/java/config/config.properties");
+			file = new FileInputStream("./src/test/resources/config/config.properties");
 			try {
 				prop.load(file);
 			} catch (IOException e) {
