@@ -83,9 +83,11 @@ public class ReportUtility {
 		String path = "";
 		try {
 			if (status.equalsIgnoreCase("Info"))
-				test.log(Status.INFO, message);
+				test.log(Status.INFO, MarkupHelper.createLabel(message,ExtentColor.ORANGE));
+			
 			else if (status.equalsIgnoreCase("Warning"))
-				test.log(Status.WARNING, message);
+				test.log(Status.WARNING, MarkupHelper.createLabel(message,ExtentColor.LIME));
+			
 			else if (status.equalsIgnoreCase("Pass")) {
 				if (!takeScreenshotForPassStep) {
 					test.log(Status.PASS, message);
@@ -93,6 +95,7 @@ public class ReportUtility {
 					path = takeScreenshot(DriverManager.driver, message);
 					test.log(Status.PASS, message, MediaEntityBuilder.createScreenCaptureFromPath(path).build());
 				}
+				
 			} else if (status.equalsIgnoreCase("Fail")) {
 				if (takeScreenshotForFailStep) {
 					path = takeScreenshot(DriverManager.driver, message);
@@ -101,6 +104,7 @@ public class ReportUtility {
 				} else {
 					test.log(Status.FAIL, MarkupHelper.createLabel(message, ExtentColor.RED));
 				}
+				
 			} else if (status.equalsIgnoreCase("Error"))
 				test.log(Status.ERROR, message);
 		} catch (IOException e) {

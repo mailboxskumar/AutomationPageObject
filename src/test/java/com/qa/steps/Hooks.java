@@ -20,7 +20,7 @@ public class Hooks extends DriverManager{
 	public static WebDriver hdriver;
 	Logger logger = Logger.getLogger(Hooks.class);
 
-	@Before()
+	/*@Before()
 	public void setUpDriver() {
 		logger.info(">>> @Before Hook Step Starts");
 		BasicConfigurator.configure();
@@ -38,6 +38,6 @@ public class Hooks extends DriverManager{
 		logger.info(">>> @After Hook Step ends");
 		
 		
-	}
+	}*/
 
 }

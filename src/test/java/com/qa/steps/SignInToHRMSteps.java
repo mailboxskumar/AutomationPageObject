@@ -26,10 +26,10 @@ public class SignInToHRMSteps {
 	public void i_am_in_HRM_portal_login_Page() {
 
 		if (loginPage.isUserNameTextBoxDisplayed()) {
-			logger.info(">>> Orange HRM login page is displayed");
+			logger.info("--->Orange HRM login page is displayed");
 			setLogStatus(test, "Pass", "Orange HRM login page is displayed");
 		} else {
-			logger.info(">>> Orange HRM login page is not displayed");
+			logger.info("--->Orange HRM login page is not displayed");
 			setLogStatus(test, "Fail", "Orange HRM login page is not displayed");
 		}
 	}

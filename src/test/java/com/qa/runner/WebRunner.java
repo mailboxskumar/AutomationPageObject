@@ -5,14 +5,10 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.qa.utility.Config;
 import com.qa.utility.ReportUtility;
-import com.vimalselvam.cucumber.listener.Reporter;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
-
-
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = { "src/test/java/com/qa/features" }, 
@@ -21,7 +17,7 @@ import cucumber.api.junit.Cucumber;
 			"json:reports/cucumber-json/jsonReport.json",
 			"junit:reports/cucumber-xml/xmlReport.xml" },
 	monochrome = true,
-	strict = false,
+	strict = true,
 	dryRun = false,
 	tags = "@HRMLogin")
 

@@ -21,7 +21,7 @@ public class LoginPage extends DriverManager {
 	@CacheLookup
 	WebElement txtPassword;
 
-	@FindBy(xpath = "//input[@id='btnLogin']")
+	@FindBy(xpath = "//input[@id='btnLogin'] | //input[@id='btnLogin1'] |")
 	@CacheLookup
 	WebElement btnLogin;
 
@@ -49,11 +49,5 @@ public class LoginPage extends DriverManager {
 	public void clickLoginButton() {
 		btnLogin.click();
 	}
-
-	/*
-	 * public static String userName_ID = "txtUsername"; public static String
-	 * password_ID = "txtPassword"; public static String login_Xpath =
-	 * "//input[@id='btnLogin']";
-	 */
 
 }
