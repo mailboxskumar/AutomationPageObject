@@ -1,14 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('prep') {
+    stage('Start') {
       steps {
-        echo 'hello'
+        echo 'Hello Maven'
+        bat(script: 'mvn --version', returnStdout: true, returnStatus: true, label: 'mvnVersion')
       }
     }
 
-  }
-  environment {
-    env = 'qa'
   }
 }
